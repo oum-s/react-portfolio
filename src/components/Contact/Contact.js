@@ -83,7 +83,7 @@ function Contact({showNav}){
     sendEmail(e);
     reset();
     }
-    console.log(errors);
+    console.log(errors, 'errors');
 
   return(
     <section id='contact'>
