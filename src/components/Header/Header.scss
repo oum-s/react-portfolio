@@ -1,0 +1,299 @@
+@import '../../styles/index.scss';
+
+.container__first{
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  .container__second{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+    .logoLink{
+      
+      .logo{
+        z-index: 2;
+        background-color: var(--primary--light);
+        border-radius: 50%;
+        padding: 4px;
+        width: 100px;
+        position: absolute;
+        // block nav // LOGO // 
+        top: calc((150px - 100px)/ 2);
+        left: 4%;
+      }
+    }
+    
+    
+    .nav{
+      height: 60px;
+      width: 95%;
+      background-color: var(--primary--light);
+      box-shadow: 0px 2px 8px 1px gainsboro;
+      /* border-radius: 10px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        li{
+          margin: 1em;
+          text-decoration: none;
+          list-style-type: none;
+          color: var(--txt--color);
+        }
+      }
+    }
+    .nav.nav__block{
+      position: absolute; 
+      right: 2.5%; 
+      z-index: 1;
+      animation: slide-left .75s ease forwards;
+
+      .Navbar__links{
+        animation: slide-left .75s ease forwards;
+      }
+
+    }
+    //nav lorsqu'elle disparaît dans l'état nav__none
+    .nav.nav__none , .nav.nav__none .Navbar__links{
+       position: absolute; 
+       right: 2.5%; 
+       z-index: 1;
+      animation: slide-right .75s ease forwards;
+
+      .Navbar__links{
+        display: none;
+        transition: all .50s ease;
+      }
+    }
+    #animationNone{
+      animation: none;
+    }
+
+
+    .Icon__burger{
+      height: 60px;
+      width: 60px;
+      //background-color: white;
+      position: absolute;
+      top: calc((150px - 60px) / 2);
+      right: 4%;
+      background: transparent;
+      border: transparent;
+      color: inherit;
+      display: none;
+      z-index: 2;
+
+        .Icon__burger__bar{
+          background: var(--txt--color);
+          border-radius: 3px;
+          display: block;
+          height: 3px;
+          margin: 0 auto;
+          position: relative;
+          transition: all .75s ease-in-out;
+          width: 48px;
+          
+          &::before{   
+            transform: translateY(-12px);
+          }
+          &::after{
+            transform: translateY(12px);
+          }
+          &::before, &::after{
+          content: "";
+          position: absolute;
+          left: 0;
+          }
+        }
+        
+    }
+    
+    // icon__burger en état normal
+    .Icon__burger__block{
+      display: block;
+    }
+
+    // css de l'icone fermé
+    .Icon__burger__bar, .Icon__burger__bar::before, .Icon__burger__bar::after{
+      margin: 0 auto;
+      display: block;
+      width: 48px;
+      height: 3px;
+      position: relative;
+      border-radius: 3px;
+      background: var(--txt--color);
+      transition: all .75s ease-in-out;
+      }
+    // css icon__burger fermé
+    .Icon__burger.close{
+
+        &::after{
+          transition: fade-out 1s linear;
+        }
+        .Icon__burger__bar{
+
+          background: transparent;
+        
+            &::before{
+              transform: rotate(45deg)
+            }
+
+            &::after{
+              transform: rotate(-45deg);
+            }
+      }
+    }
+    /* .Icon__burger__bar:after{
+      transform: translateY(12px);
+    } */
+  }
+
+}
+@media screen and (max-width: 839px) {
+  .container__first .container__second .nav ul {
+    justify-content: flex-end;
+  }
+}
+
+//MEDIA QUERIES (MEDIUM AND SMALL DEVICES)
+@media screen and (max-width: 720px){
+.container__first{
+  // .logoLink{
+  //   height: 6rem;
+  //   position: absolute;
+  //   top: 0.7rem;
+  // }
+  
+  .nav{
+    /* background-color: transparent; */
+    // .display{
+    //   display: none;
+    //   visibility: hidden;
+    // } 
+  // enlever car lors du click et reclick sur le toggle sm la classe reste none
+    .Navbar__links{
+      position: fixed;
+      visibility: hidden;
+
+      &__item {
+        transform: translateY(/* height: 100vh; */);
+      }
+    }
+    //toggle menu
+    
+  }
+
+  // .Icon__burger{
+  //     z-index: 2;
+  //     width: 4rem;
+  //     height: 4rem;
+  //     top: 1.9rem;
+  //     right: 1rem;
+  //     background: transparent;
+  //     border: transparent;
+  //     color: inherit;
+  //     display: block;
+  //     position: fixed;
+  //     &:hover{
+  //       cursor: pointer;
+  //     }
+  // }
+}
+.container__second .logoLink.logoNone{
+  display: none;
+  transition: all .75s ease;
+}
+.container__second .nav.nav__none{
+  box-shadow: none;
+  margin: 0;
+  box-shadow: none;
+  animation: none;
+  background-color: transparent;
+}
+.container__first .container__second .nav.nav__block {
+  /* margin: 0;
+  box-shadow: none;
+  animation: none;
+  background-color: transparent; */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: -100vw;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary--light);
+    visibility: visible;
+    // ANIMATION
+    animation: fade-in 1.4s ease-in-out forwards;
+  .Navbar__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding: 2rem;
+    background-color: var(--primary--light);
+    visibility: visible;
+    // ANIMATION
+    animation: fade-in 1.4s ease-in-out forwards;
+    
+    &__item{
+      transform: translateY(0);
+    }
+    .slideInDown-1{
+      transition: all 1s ease-out;
+    }
+    .slideInDown-2{
+      transition: all 1.1s ease-out;
+    }
+    .slideInDown-3{
+      transition: all 1.2s ease-out;
+    }
+    .slideInDown-4{
+      transition: all 1.3s ease-out;
+    }
+    
+      a {
+        display: block;
+        padding: 1.5rem;
+        font-size: 5vw;
+      }
+  }
+}
+button .Icon__burger.Icon__burger__block{
+  &__bar{
+    background: transparent;
+  }
+  &__bar::before{
+    transform: rotate(45deg);
+  }
+  &__bar::after{
+    transform: rotate(-45deg);
+  }
+}
+
+}
+//MEDIA QUERIES (small DEVICES)
+@media screen and (max-width: 600px){
+.logoLink{
+  display: none;
+}
+}

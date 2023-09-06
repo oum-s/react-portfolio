@@ -1,0 +1,125 @@
+@import '../../styles/index.scss';
+
+#home{
+ height: 90vh;
+ width: 100%;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ .div__first, .div__main, .div__last{
+  font-size: 2rem;
+  color: var(--secondary);
+  margin: 0 auto;
+  position: absolute;
+ }
+ .div__first{
+  top: 22%;
+    right: 11%;
+  width: 80%;
+  height: 70%;
+  border: 2px solid var(--secondary);
+ 
+ }
+ .div__last{
+  top: 18%;
+  right: 8%;
+  width: 80%;
+  height: 70%;
+  border: 2px solid var(--secondary);
+ 
+ }
+ .div__main{
+  top: 20%;
+  right: 9.3%;
+  width: 80%;
+  height: 70%;
+  border: 4px solid var(--txt--color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2{
+    font-size: 2rem;
+  }
+  p{
+    font-size: small;
+  }
+  h1{
+    padding: 0;
+    margin: 0 auto;
+    font-size: calc( 1.5em + 2vmin );
+  }
+
+  .skills__langages{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-height: 5rem;
+    height: 20%;
+    align-items: center;
+  
+    .svg-inline--fa{
+      padding-right: 1rem;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: all .5s ease-in-out;
+      &:hover{
+        transform: scale(1.5);
+      }
+    }
+    .fa-html5{
+      color: #DD4B25;
+    }
+    .fa-css3-alt{
+      color: #146EB0;
+    }
+    .fa-square-js{
+      color: #F2DB1D;
+    }
+    .fa-react{
+      color: #5ED3F3;
+    }
+    .fa-wordpress{
+      color: #017197;
+    }
+    .fa-php{
+      color: #858EB8;
+    }
+  }
+ }
+
+
+}
+
+//MEDIA QUERIES (MEDIUM AND SMALL DEVICES)
+@media screen and (max-width: 720px){
+ 
+  #home .div__main h1 {
+    font-size: calc(1em + 2vmin);
+  }
+  #home .div__main h2 {
+    font-size: 1rem;
+  }
+  .App #home .div__first,.App #home .div__last,.App #home .div__main{
+    border: none;
+  }
+}
+//MEDIA QUERIES (small DEVICES)
+@media screen and (max-width: 400px){
+  .svg-inline--fa {
+    height: 0.7em;
+  }
+  #home .div__main h1 {
+    font-size: calc(0.5em + 2vmin);
+  }
+}
+
+//MEDIA QUERIES (small DEVICES)
+@media screen and (max-width: 320px){
+  .App #home .div__main__presentation{
+    padding-bottom: 5rem;
+  }
+}

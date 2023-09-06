@@ -1,0 +1,69 @@
+@import '../../styles/index.scss';
+
+
+.footer{
+  height: 20%;
+  max-height: 20vh;
+  width: 100%;
+  background-color: rgb(200, 72, 97);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .permalinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 1.5rem;
+    a{
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+        &::after{
+          background-color: white;
+        }
+      }
+  }
+
+  &__socials{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    a {
+      background-color: var(--primary);
+      padding: 0.2em;
+      border-radius: 0.7rem;
+      display: flex;
+      border: 1px solid transparent;
+      font-size: 1.5rem;
+      color: var(--txt--color);
+
+      .svg-inline--fa{
+        height: 0.8em;
+      }
+      &:hover{
+        transition: all 0.75s ease;
+        background-color: var(--txt--color);
+        color: var(--primary);
+        border-color: var(--txt--color);
+      }
+    }
+  }
+}
+
+//MEDIA QUERIES (SMALL DEVICES)
+@media screen and (max-width: 800px){
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .permalinks{
+    display: none;
+  }
+}
