@@ -11,7 +11,6 @@ function Home() {
     <div id='home'>
       
       <div className='div__first'></div>
-      
       <div className='div__last'></div>
       <div className='div__main'>
         <div className='div__main__presentation'>

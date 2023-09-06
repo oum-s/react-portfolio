@@ -1,7 +1,7 @@
 import './Contact.scss';
 import {useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
@@ -120,7 +120,7 @@ function Contact({showNav}){
             
             </div>
 
-            {/* <section className={`fa-chevron-up ${showTopBtn ? " " : "noBtn"}`}>
+            <section className={`fa-chevron-up ${showTopBtn ? " " : "noBtn"}`}>
               {" "}
               {showTopBtn && (
               <FontAwesomeIcon
@@ -128,7 +128,7 @@ function Contact({showNav}){
                 onClick={()=> scrollToTheTop()}
                 />
                 )}{" "}
-            </section> */}
+            </section>
 
         </div>
 

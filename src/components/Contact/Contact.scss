@@ -81,11 +81,12 @@
 
 
 section.fa-chevron-up{
+  z-index: 3;
   cursor: pointer;
   margin: 0;
   position: fixed;
   right: 0;
-  bottom: 8.5rem;
+  bottom: 20vh;
   font-weight: 300;
   font-size: 2rem;
   color: var(--txt--color);
