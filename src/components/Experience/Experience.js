@@ -78,7 +78,7 @@ function Experience({showNav}){
                         <p>Langages utilisés: HTML/CSS</p>
 
                         <div className='exp__btn'>
-                          <a href="https://github.com/oum-s/skyblog/deployments/github-pages">
+                          <a href="https://oum-s.github.io/skyblog/">
                             <FontAwesomeIcon className='faLink' icon={faLink} />
                           </a>
                         </div>
