@@ -2,13 +2,12 @@ import './Experience.scss';
 import CallToAction from '../Experience/CallToAction';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
-import projetOMC from '../../assets/COMORES.jpg'
+import projetOC2 from '../../assets/bookiFr__img.jpg'
 import projetTL from '../../assets/project__teenlabs-min.png'
 import projetOC from '../../assets/kanap05.jpg';
 import projetSkyblog from '../../assets/skyblog__-min.png'
 import logoOC from '../../assets/OC_logo-min.png';
 import logoTL from '../../assets/teenlabs-logo-min.jpg';
-import logoOMC from '../../assets/logo--oh-mycode-min.png';
 import logoSky from '../../assets/skyblog--logo-min.png';
 
 function Experience({showNav}){
@@ -38,17 +37,17 @@ function Experience({showNav}){
 
                   <div 
                   className="experience__project__card up">
-                    <img src={projetOMC} alt='projet__ohmycode' /> 
+                    <img src={projetOC2} alt='projet__oc2' /> 
                   </div>
 
                   <div className='hidden__card  up'>
                     <div className='hidden__card__img'>
-                      <img src={logoOMC} alt='ohmycode__logo'></img>
+                      <img src={logoOC} alt='oc2__logo'></img>
                     </div>
-                      <h5>Ohmycode</h5>
+                      <h5>Booki FR</h5>
                       <p>Langages utilisés: HTML/CSS</p>
                     <div className='exp__btn'>
-                    <a href="https://oum-s.github.io/ohmycode/">
+                    <a href="https://oum-s.github.io/P2-BookiFr/">
                       <FontAwesomeIcon className='faLink' icon={faLink} />
                     </a>
                     </div>
