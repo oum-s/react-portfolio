@@ -3,11 +3,12 @@ import CallToAction from '../Experience/CallToAction';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import projetOC2 from '../../assets/bookiFr__img.jpg'
-import projetTL from '../../assets/project__teenlabs-min.png'
-import projetOC from '../../assets/kanap05.jpg';
+import projetKws from '../../assets/kitabwasunna.jpg'
+import projetWebflow from '../../assets/arabic_book.jpg';
 import projetSkyblog from '../../assets/skyblog__-min.png'
+import logoMadrassa from '../../assets/madrassatou-el-ilm-logo.png';
 import logoOC from '../../assets/OC_logo-min.png';
-import logoTL from '../../assets/teenlabs-logo-min.jpg';
+import logoKws from '../../assets/kws_logo.png';
 import logoSky from '../../assets/skyblog--logo-min.png';
 
 function Experience({showNav}){
@@ -91,17 +92,17 @@ function Experience({showNav}){
 
                     <div 
                     className="experience__project__card clmn first">
-                    <img src={projetOC} alt='projet__oc' /> 
+                    <img src={projetWebflow} alt='projet__madrassa' /> 
                     </div>
 
                     <div className='hidden__card first'>
                       <div className='hidden__card__img oc'>
-                        <img src={logoOC} alt='openclassrooms__logo'></img>
+                        <img src={logoMadrassa} alt='madrassa__logo'></img>
                       </div>
-                      <h5>OPENCLASSROOMS</h5>
-                      <p>Langage utilisé: React</p>
+                      <h5>Madrassatou El Ilm</h5>
+                      <p>CMS utilisé: Webflow</p>
                       <div className='exp__btn'>
-                        <a href="https://github.com/oum-s/P5-Kanap">
+                        <a href="https://madrassatou-el-ilm.webflow.io/">
                           <FontAwesomeIcon className='faLink' icon={faLink} />
                         </a>
                       </div>
@@ -110,16 +111,16 @@ function Experience({showNav}){
                   <div className='hideAndSeek'>
                     <div 
                     className="experience__project__card clmn second">
-                    <img src={projetTL} alt='projet__teenlabs' /> 
+                    <img src={projetKws} alt='projet__kitabwasunna' /> 
                     </div>
                     <div className='hidden__card second'>
                       <div className='hidden__card__img tl'>
-                        <img src={logoTL} alt='TEENLABS__logo'></img>
+                        <img src={logoKws} alt='kitabwasunna__logo'></img>
                       </div>
-                      <h5>Teenlabs</h5>
-                      <p>Langage utilisé: PHP/MySQL</p>
+                      <h5>Kitabwasunna</h5>
+                      <p>CMS utilisé: Wordpress</p>
                       <div className='exp__btn'>
-                        <a href="https://github.com/oum-s/tl_essai">
+                        <a href="https://kitabwasunna.ebhousing.com/">
                             <FontAwesomeIcon className='faLink' icon={faLink} />
                         </a>
                       </div>

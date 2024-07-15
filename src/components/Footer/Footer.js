@@ -1,6 +1,6 @@
 import '../Footer/Footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
   return (
@@ -9,7 +9,7 @@ function Footer() {
 
       <div className='footer__socials'>
         <a href='https://www.linkedin.com/in/oumiy/'><FontAwesomeIcon icon={faLinkedin} className='social__icons'/></a>
-        <a href='https://twitter.com/oumisalam'><FontAwesomeIcon icon={faTwitter} className='social__icons'/></a>
+        <a href='https://twitter.com/oumiy__'><FontAwesomeIcon icon={faSquareXTwitter} className='social__icons'/></a>
         <a href='https://github.com/oum-s'><FontAwesomeIcon icon={faGithub} className='social__icons'/></a> 
       </div>
 
