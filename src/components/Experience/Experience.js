@@ -3,12 +3,12 @@ import CallToAction from '../Experience/CallToAction';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import projetOC2 from '../../assets/bookiFr__img.jpg'
-import projetKws from '../../assets/kitabwasunna.jpg'
+import projetLibrary from '../../assets/library.png'
 import projetWebflow from '../../assets/arabic_book.jpg';
 import projetSkyblog from '../../assets/skyblog__-min.png'
 import logoMadrassa from '../../assets/madrassatou-el-ilm-logo.png';
 import logoOC from '../../assets/OC_logo-min.png';
-import logoKws from '../../assets/kws_logo.png';
+import logoLibrary from '../../assets/library_logo.png';
 import logoSky from '../../assets/skyblog--logo-min.png';
 
 function Experience({showNav}){
@@ -111,16 +111,16 @@ function Experience({showNav}){
                   <div className='hideAndSeek'>
                     <div 
                     className="experience__project__card clmn second">
-                    <img src={projetKws} alt='projet__kitabwasunna' /> 
+                    <img src={projetLibrary} alt='projet__library' /> 
                     </div>
                     <div className='hidden__card second'>
                       <div className='hidden__card__img tl'>
-                        <img src={logoKws} alt='kitabwasunna__logo'></img>
+                        <img src={logoLibrary} alt='library__logo'></img>
                       </div>
-                      <h5>Kitabwasunna</h5>
-                      <p>CMS utilisé: Wordpress</p>
+                      <h5>Library</h5>
+                      <p>CMS utilisé: Webflow</p>
                       <div className='exp__btn'>
-                        <a href="https://kitabwasunna.ebhousing.com/">
+                        <a href="https://library-a73d3d.webflow.io/">
                             <FontAwesomeIcon className='faLink' icon={faLink} />
                         </a>
                       </div>
